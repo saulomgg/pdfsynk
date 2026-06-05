@@ -1,57 +1,71 @@
-# 📄 PdfSynk - Editor de PDF Profissional
+# 📄 PdfSynk - Ferramenta Oficial HubSynk
 
-![PdfSynk Banner](assets/screenshot.png)
-
-[![Version](https://img.shields.io/badge/version-1.2-blue?style=flat-square)](https://github.com/saulomgg/HubSynk)
+[![Version](https://img.shields.io/badge/version-1.1-blue?style=flat-square)](https://github.com/saulomgg/HubSynk)
 [![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%2010%2B-lightgrey?style=flat-square)](https://github.com/saulomgg/HubSynk)
 
-**PdfSynk** é uma solução profissional e moderna para manipulação de arquivos PDF, desenvolvida como parte do ecossistema **HubSynk**. Com uma interface intuitiva e recursos avançados, o PdfSynk permite realizar tarefas complexas de forma rápida, segura e totalmente local.
+**PdfSynk** é uma ferramenta profissional de manipulação de PDFs, desenvolvida para ser rápida, modular e segura. Como parte integrante do ecossistema **HubSynk**, ela oferece uma interface moderna para tarefas essenciais do dia a dia.
 
+![PdfSynk Banner](assets/screenshot.png)
 ---
 
-## ✨ Funcionalidades Profissionais
+## ✨ Funcionalidades
 
--   **📉 Compactação Inteligente**: Reduza o tamanho de seus arquivos PDF otimizando imagens e fluxos de conteúdo sem perda perceptível de qualidade.
--   **✂️ Extração e Divisão**: Selecione páginas específicas para extrair em um novo arquivo ou divida um documento inteiro em páginas individuais.
--   **🔗 Junção de PDFs**: Combine múltiplos documentos em um único arquivo com facilidade.
--   **🔄 Rotação Avançada**: Corrija a orientação de páginas específicas ou de todo o documento.
--   **💧 Marca D'água**: Aplique camadas de proteção visual usando PDFs personalizados.
--   **🖼️ Conversão de Imagem**: Transforme conjuntos de imagens (JPG, PNG) em documentos PDF profissionais.
--   **🔒 Segurança Robusta**: Proteja seus documentos com criptografia de senha de abertura.
--   **📝 Gestão de Metadados**: Visualize e edite informações internas como Título e Autor.
+-   **Extração Inteligente**: Selecione páginas específicas (ex: 1, 3-5) e extraia para um novo arquivo ou divida em múltiplos PDFs.
+-   **Junção (Merge)**: Combine múltiplos arquivos PDF em um único documento, organizando a ordem facilmente.
+-   **Rotação de Páginas**: Gire páginas selecionadas ou todo o documento em ângulos de 90, 180 ou 270 graus.
+-   **Marca D'água**: Aplique marcas d'água personalizadas (baseadas em PDF de uma página) em páginas específicas ou em todo o documento.
+-   **Imagem para PDF**: Converta múltiplas imagens (JPG, PNG) em um único arquivo PDF, mantendo a ordem desejada.
+-   **Proteção por Senha**: Criptografe seus PDFs com senhas de abertura para garantir a segurança do documento.
+-   **Edição de Metadados**: Visualize e edite informações como Título, Autor, Assunto e Palavras-chave do seu PDF.
+-   **Interface Moderna**: Tema Dark otimizado para produtividade, sem distrações.
+-   **Integração HubSynk**: Totalmente compatível com o hub de ferramentas e verificação criptográfica.
 
 ---
 
 ## 🚀 Como Usar
 
-1.  **Carregar**: Clique em `📁 Carregar PDF` para iniciar.
-2.  **Configurar**: Utilize as abas para escolher a operação desejada (Extração, Junção, Avançado ou Segurança).
-3.  **Processar**: Clique no botão de ação (ex: `📉 Compactar PDF`, `🚀 Processar`) e salve seu novo arquivo.
+1.  **Carregar**: Clique em `📁 Carregar PDF` para abrir seu arquivo base.
+2.  **Configurar**: Informe as páginas desejadas, adicione arquivos para junção, configure rotações, marcas d'água, etc.
+3.  **Processar**: Clique no botão de ação correspondente (ex: `🚀 Processar`, `🔗 Juntar PDFs`, `🔄 Rotacionar`, `💧 Aplicar Marca`, `🖼️ Converter`, `🔒 Proteger`, `📝 Atualizar`) e escolha onde salvar o resultado.
 
 ---
 
-## 🛠️ Estrutura do Projeto
+## 🛠️ Estrutura Modular
+
+O projeto foi reestruturado para facilitar a manutenção e escalabilidade:
 
 ```text
 PdfSynk/
-├── main.py              # Ponto de entrada da aplicação
-├── core/                # Lógica central de processamento PDF
-├── ui/                  # Interface gráfica moderna (Tkinter)
-├── utils/               # Constantes globais e helpers
-├── assets/              # Identidade visual e recursos
-└── wiki/                # Documentação técnica completa
+├── main.py              # Ponto de entrada do programa
+├── core/                # Lógica de processamento de PDF
+├── ui/                  # Interface gráfica (Tkinter/Custom Styles)
+├── utils/               # Constantes, cores e helpers
+├── assets/              # Ícones, logos e imagens do instalador
+└── wiki/                # Documentação detalhada
 ```
 
 ---
 
-## 🤝 Ecossistema HubSynk
+## 📦 Compilação e Distribuição
 
-O PdfSynk faz parte de uma iniciativa para criar ferramentas úteis e seguras para a comunidade. Seu apoio é fundamental:
+### 1. Gerar Executável (.exe)
+Utilize o PyInstaller com o arquivo `.spec` fornecido:
+```bash
+pyinstaller pdfsynk.spec
+```
 
--   ⭐ **GitHub**: [saulomgg/HubSynk](https://github.com/saulomgg/HubSynk)
--   📖 **Documentação**: Confira nossa [Wiki](wiki/Home.md) para detalhes técnicos.
--   🎁 **Apoie o Projeto**: Utilize o botão "Suporte / Doação" dentro do programa para contribuir.
+### 2. Criar Instalador
+Abra o arquivo `pdfsynk_installer.iss` no **Inno Setup Compiler** para gerar o instalador profissional com a identidade visual do HubSynk.
 
 ---
-*Desenvolvido profissionalmente por [saulomgg](https://github.com/saulomgg)*
+
+## 🤝 Suporte e Contribuição
+
+O desenvolvimento do PdfSynk é mantido pela comunidade. Se você gosta do projeto, considere apoiar:
+
+-   ⭐ **GitHub**: [saulomgg/HubSynk](https://github.com/saulomgg/HubSynk)
+-   🎁 **Suporte/Doação**: Acesse o botão de suporte dentro do programa.
+
+---
+*Desenvolvido com ❤️ por [saulomgg](https://github.com/saulomgg)*
